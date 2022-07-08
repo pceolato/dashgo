@@ -28,7 +28,7 @@ const options: ApexOptions = {
         enabled: false,
     },
     xaxis: {
-        type: 'datetime',
+        // type: 'datetime',
         axisBorder: {
             color: theme.colors.gray[600]
         },
@@ -36,13 +36,20 @@ const options: ApexOptions = {
             color: theme.colors.gray[600]
         },
         categories: [
-            '2022-07-18T00:00:00.000Z',
-            '2022-07-19T00:00:00.000Z',
-            '2022-07-20T00:00:00.000Z',
-            '2022-07-21T00:00:00.000Z',
-            '2022-07-22T00:00:00.000Z',
-            '2022-07-23T00:00:00.000Z',
-            '2022-07-24T00:00:00.000Z',
+            // '2022-07-18T00:00:00.000Z',
+            // '2022-07-19T00:00:00.000Z',
+            // '2022-07-20T00:00:00.000Z',
+            // '2022-07-21T00:00:00.000Z',
+            // '2022-07-22T00:00:00.000Z',
+            // '2022-07-23T00:00:00.000Z',
+            // '2022-07-24T00:00:00.000Z',
+            new Date("2022-03-23T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            new Date("2022-03-24T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            new Date("2022-03-25T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            new Date("2022-03-26T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            new Date("2022-03-27T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            new Date("2022-03-28T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            new Date("2022-03-29T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" })
         ]
     },
     fill: {
@@ -77,7 +84,7 @@ export default function Dashboard() {
                         pb="4"
                     >
                         <Text fontSize="lg" mb="4">Inscritos da semana</Text>
-                        <Chart options={options} series={series} type="area" height={160}/>
+                        <Chart options={options} series={series} type="area" height={170}/>
                     </Box>
                     <Box
                         p={["6", "8"]}
@@ -87,7 +94,7 @@ export default function Dashboard() {
                         pb="4"
                     >
                         <Text fontSize="lg" mb="4">Taxa de Abertura</Text>
-                        <Chart options={options} series={series} type="area" height={160}/>
+                        <Chart options={options} series={series} type="area" height={170}/>
                     </Box>
                 </SimpleGrid>
              </Flex>
