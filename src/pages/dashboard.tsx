@@ -28,7 +28,7 @@ const options: ApexOptions = {
         enabled: false,
     },
     xaxis: {
-        // type: 'datetime',
+        type: 'datetime',
         axisBorder: {
             color: theme.colors.gray[600]
         },
@@ -36,20 +36,20 @@ const options: ApexOptions = {
             color: theme.colors.gray[600]
         },
         categories: [
-            // '2022-07-18T00:00:00.000Z',
-            // '2022-07-19T00:00:00.000Z',
-            // '2022-07-20T00:00:00.000Z',
-            // '2022-07-21T00:00:00.000Z',
-            // '2022-07-22T00:00:00.000Z',
-            // '2022-07-23T00:00:00.000Z',
-            // '2022-07-24T00:00:00.000Z',
-            new Date("2022-03-23T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
-            new Date("2022-03-24T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
-            new Date("2022-03-25T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
-            new Date("2022-03-26T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
-            new Date("2022-03-27T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
-            new Date("2022-03-28T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
-            new Date("2022-03-29T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" })
+            '2022-07-18T00:00:00.000Z',
+            '2022-07-19T00:00:00.000Z',
+            '2022-07-20T00:00:00.000Z',
+            '2022-07-21T00:00:00.000Z',
+            '2022-07-22T00:00:00.000Z',
+            '2022-07-23T00:00:00.000Z',
+            '2022-07-24T00:00:00.000Z',
+            // new Date("2022-03-23T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            // new Date("2022-03-24T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            // new Date("2022-03-25T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            // new Date("2022-03-26T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            // new Date("2022-03-27T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            // new Date("2022-03-28T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" }),
+            // new Date("2022-03-29T00:00:00.000Z").toLocaleString('pt-BR', { day: "2-digit", month: "short" })
         ]
     },
     fill: {
@@ -77,7 +77,7 @@ export default function Dashboard() {
 
                 <SimpleGrid flex="1" gap="4" minChildWidth="320px" alignItems="flex-start"> 
                     <Box
-                        p={["4", "6"]}
+                        p={["6", "8"]}
                         bg="gray.800"
                         borderRadius={8}                        
                         // h="100%"
@@ -87,7 +87,7 @@ export default function Dashboard() {
                         <Chart options={options} series={series} type="area" height={170}/>
                     </Box>
                     <Box
-                        p={["4", "6"]}
+                        p={["6", "8"]}
                         bg="gray.800"
                         borderRadius={8}                        
                         // h="100%"
